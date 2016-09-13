@@ -1,11 +1,13 @@
-import java.util.scanner;
+import java.util.Scanner;
 public class BMI{
-	public static void main(String argsp[])
+	public static void main(String[]args)
 	{
-		Scanner kb = new scanner(System.in);
-		int h;
-		System.out.println("Enter your weight");
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Enter your weight in pounds");
 		int w = kb.nextInt();
-		
+		System.out.println("Enter your height in inches");
+		int h = kb.nextInt();
+		double bmi = 703 * w / (h*h);
+		System.out.println("Your bmi is " + bmi);
 	}
 }
