@@ -1,27 +1,26 @@
 import java.util.Scanner;
-public class Rectangle
+public class RectanglePart3
 {
-	static double l, w, p;
 	public static void main (String[]args)
 		{
+		double l, w;
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Enter length");
 		l = kb.nextDouble();
 		System.out.println("Enter width");
 		w = kb.nextDouble();
-		calcPerim();
-		print();
+		print(calcPerim(l, w));
 		
 		
 		
 		}
-	public static void calcPerim()
+	public static double calcPerim(double l, double w)
 	{
-		p = ((l+w) * 2);
+		return 2*(l+w);
 	}
-	public static void print()
+	public static void print(double p)
 	{
-		System.out.printf("Your rectangle %10.4f", p);
+		System.out.printf("Your rectangle %10.4f ft around", p);
 	}
 	
 }
