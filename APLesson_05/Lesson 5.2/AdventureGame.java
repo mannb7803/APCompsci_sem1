@@ -16,7 +16,7 @@ public class AdventureGame
 			{
 				System.out.println("One year has passed since you settled on this spot and the town has grown a substantial amount. \nSome peope would like to host the towns first election for mayor. \nDo you allow or ignore this request.");
 				answer = kb.nextLine();
-				if (!answer.equalsIgnoreCase("allow") || !answer.equalsIgnoreCase("ignore"))
+				if (!answer.equalsIgnoreCase("allow") && !answer.equalsIgnoreCase("ignore"))
 				{
 					System.out.println("I didn't quite get that, please try again \n Do you allow or ignore this request.");
 					answer= kb.nextLine();

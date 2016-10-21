@@ -35,7 +35,8 @@ public class Discount
 		printf(item3, price3);
 		printf(item4, price4);
 		printf("subtotal", subtotal);
-		
+		System.out.println("\t--------------------------");
+		System.out.println("\tThank you for your business");
 	}
 	public static void printf(String a, double b)
 	{

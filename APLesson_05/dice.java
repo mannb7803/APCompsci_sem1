@@ -15,13 +15,14 @@ public class dice
 	}
 	public static void rollDice()
 	{
-		if(player > computer)
-		{
-			winner = ("Player wins");
-		}
+		if(player => computer)
+		
+			winner = ("Player wins!");
+		
 		if(computer > player)
-		{
-			winner = ("Computer wins");
-		}
+		
+			winner = ("Computer wins!");
+		
+	
 	}
 }
