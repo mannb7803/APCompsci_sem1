@@ -11,7 +11,7 @@ public class notes2
 		calc();
 		print();
 	}
-	public static int calc()
+	public static void calc()
 	{
 		return answer = x+y;
 	}
