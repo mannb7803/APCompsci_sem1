@@ -67,7 +67,7 @@ public class AdventureGame
 			}
 			else if (Settle.equalsIgnoreCase("leave"))
 			{
-				System.out.println("Your entire party and family dies as you walk for the next two months. You eventually get find 3 disheveled men who you group up with.\nOver the next two months you become the leader of your new gang.\nDo you attack the local town or train?");
+				System.out.println("Your entire party and family dies as you walk for the next two months. You eventually find 3 disheveled men who you group up with.\nOver the next two months you become the leader of your new gang.\nDo you attack the local town or train?");
 				vote = kb.nextLine();
 					if (!vote.equalsIgnoreCase("local town") && !vote.equalsIgnoreCase("train"))
 					{
@@ -76,9 +76,9 @@ public class AdventureGame
 					}
 					else if (vote.equalsIgnoreCase("local town"))
 					{
-						System.out.println("As you and your gang are gathering up the hostages you see a man from your old traveling party you thought was dead. Do you set him free or execute him?");
+						System.out.println("As you and your gang are gathering up the hostages you see a man from your old traveling party you thought was dead. \nDo you set him free or execute him?");
 						action1 = kb.nextLine();
-					}
+					
 						if (!action1.equalsIgnoreCase("set him free") && !action1.equalsIgnoreCase("execute him"))
 						{
 							System.out.println("I didn't quite get that, please try again using \"set him free\" or \"execute him\". \nDo you set him free or execute him?");
@@ -94,6 +94,7 @@ public class AdventureGame
 							System.out.println("That one time this man stole your blanket flares up in your mind. In a fit of rage you pull out your gun and kill him. \nAs you do this a sherif rides into town unnoticed and opens fire on you. You were hit and left behind by your gang to be hung");
 							dead();
 						}
+					}
 					else if (vote.equalsIgnoreCase("train"))
 					{
 						System.out.println("You manage to get on the train easily. You decide to search through some luggage when you discover a massive golden nugget.\nDo you inform the gang of keep it hidden?" );
@@ -105,7 +106,7 @@ public class AdventureGame
 						}
 						else if(action2.equalsIgnoreCase("inform the gang"))
 						{
-							System.out.println("You let the group know once you get back to your hideout, that night one of your more greedy members decides he deserves it. You discover him as he is leaving with the nugget and a stolen horse, he shoots you where you stand and takes off.");
+							System.out.println("You let the group know once you get back to your hideout. That night one of your more greedy members decides he deserves it. \nYou discover him as he is leaving with the nugget and a stolen horse, he shoots you where you stand and takes off.");
 						dead();
 						}
 						else if(action2.equalsIgnoreCase("keep it hidden"))
