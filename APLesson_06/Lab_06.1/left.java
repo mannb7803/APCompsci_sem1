@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ex6 {
+public class left {
 	
 		public static void main (String args[])
 		{
