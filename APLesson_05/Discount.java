@@ -28,6 +28,10 @@ public class Discount
 		kb.nextLine();
 		
 		subtotal = price1 + price2 + price3 + price4;
+		discount = calc();
+		tax = subtotal * 0.08;
+		fprice = subtotal - discount + tax;
+		
 		System.out.println("\t<<<<<<< Receipt >>>>>>>");
 		
 		printf(item1, price1);
@@ -35,11 +39,25 @@ public class Discount
 		printf(item3, price3);
 		printf(item4, price4);
 		printf("subtotal", subtotal);
+		printf("Discount", discount);
+		printf("Tax", tax);
+		printf("Total", fprice);
 		System.out.println("\t--------------------------");
 		System.out.println("\tThank you for your business");
 	}
-	public static void printf(String a, double b)
-	{
-		System.out.printf("%10s ........ %5.4f\n", a, b);
-	}
+		public static double calc()
+		{
+			if (subtotal >= 2000)
+			{
+				return discount = subtotal * 0.15;
+			}
+			else 
+			{
+				return discount = 0.0;
+			}
+		}
+		public static void printf(String a, double b)
+		{
+			System.out.printf("%10s ........ %5.4f\n", a, b);
+		}
 }
