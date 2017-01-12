@@ -25,6 +25,7 @@ public class ex10_1
 		for(int i = 0; i < num.size(); i++)
 		{
 			if(gFactor(num.get(i)) == 0)
+		
 			{
 				num.remove(i);
 				i--;
