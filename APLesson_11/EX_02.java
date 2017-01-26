@@ -25,4 +25,3 @@ public class EX_02
 		}
 	}
 }
-}

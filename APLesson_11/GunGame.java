@@ -44,7 +44,7 @@ public class GunGame
 			}
 			else
 			{
-				System.out.println("Reload");
+				System.out.println("Reload!");
 			}
 		}
 		public static void reload()

@@ -27,6 +27,6 @@ public class EX_04
 				}
 			}
 		}
-		System.out.println("There are " + count + " numbers divisible by " + d + " in the Array");
-	}
+		System.out.println("There are " + count + " number(s) divisible by " + d + " in the Array");
+	}	
 }

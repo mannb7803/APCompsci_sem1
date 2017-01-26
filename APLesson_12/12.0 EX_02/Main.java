@@ -16,7 +16,7 @@ public class Main
 		
 		System.out.println("Distance = " + dis.getDist());
 		
-		System.out.println("Please enter x1");
+		System.out.println("Please enter another x1 value");
 		x1 = kb.nextInt();
 		System.out.println("Please enter x2");
 		x2 = kb.nextInt();

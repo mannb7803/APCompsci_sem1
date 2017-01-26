@@ -50,6 +50,7 @@ public class user {
         String ln = kb.nextLine();
         System.out.println("Do you want a public avatar? Enter yes or no");
         String bool = kb.nextLine();
+		// jluu told me to make this one so i did :)
         if (bool.equalsIgnoreCase("no"))
         {
             user1 = new user(fn, ln);
