@@ -13,7 +13,7 @@ public class Inventory
         name = null;
         UPC = 0;
         price =0;
-        category = null;
+        category = "UNIDENTIFIED";
     }
 
     public Inventory(String m, String n)
@@ -34,7 +34,7 @@ public class Inventory
     }
     public String toString()
     {
-        return "Manufacturer: " + manufacturer + "\nName: " + name + "\nCategory: " + category + "" + "$\nPrice: " + price + "\nUPC ID: " + UPC;
+        return "Manufacturer: " + manufacturer + "\nName: " + name + "\nCategory: " + category + "" + "\nPrice: " + price + "\nUPC ID: " + UPC;
     }
 
     public static void main (String args[])
