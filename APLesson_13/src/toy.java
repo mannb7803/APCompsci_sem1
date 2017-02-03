@@ -3,8 +3,8 @@
  */
 public abstract class toy
 {
-    private String name;
-    private int count;
+    private  String name;
+    private  int count;
 
     public toy()
     {
