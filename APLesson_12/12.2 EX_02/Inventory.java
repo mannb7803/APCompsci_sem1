@@ -1,6 +1,3 @@
-/**
- * Created by mannb7803 on 1/26/2017.
- */
 import java.util.Scanner;
 public class Inventory
 {
@@ -13,7 +10,7 @@ public class Inventory
         name = null;
         UPC = 0;
         price =0;
-        category = "UNIDENTIFIED";
+        category = null;
     }
 
     public Inventory(String m, String n)
