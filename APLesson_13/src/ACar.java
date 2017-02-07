@@ -7,9 +7,9 @@ public class ACar extends toy
     {
         super();
     }
-    public ACar(String n, int x)
+    public ACar(String n)
     {
-        super(n, x);
+        super(n);
     }
     public String getType()
     {

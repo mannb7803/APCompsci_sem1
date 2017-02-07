@@ -11,10 +11,10 @@ public abstract class toy
        this.name = null;
         this.count = 1;
     }
-    public toy(String n, int x)
+    public toy(String n)
     {
         this.name = n;
-        this.count = x;
+        this.count = 1;
     }
     public String getName()
     {

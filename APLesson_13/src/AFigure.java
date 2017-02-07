@@ -7,13 +7,13 @@ public class AFigure extends toy
     {
         super();
     }
-    public AFigure(String n, int x)
+    public AFigure(String n)
     {
-        super(n, x);
+        super(n);
     }
     public String getType()
     {
-        return "Action Figure";
+        return "af";
     }
     public String toString()
     {

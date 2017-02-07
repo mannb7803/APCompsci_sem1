@@ -7,10 +7,10 @@ import java.util.Arrays;
  */
 public class Toystore
 {
-   public static ArrayList<toy> list = new ArrayList<toy>();
+    ArrayList<toy> toyList;
     public Toystore()
     {
-        list = null;
+        ArrayList<toy> toylist = new ArrayList<>();
     }
     public Toystore(String l)
     {
@@ -19,38 +19,87 @@ public class Toystore
 
     public void loadtoys(String l)
     {
-
-        ArrayList<String> toys = new ArrayList<String>(Arrays.asList(l.split(", ")));
-        for(int i = 0; i < toys.size(); i++)
+        ArrayList<String> toys = new ArrayList<>(Arrays.asList(l.split(", ")));
+        toyList = new ArrayList<>();
+        for(int i = 0; i < toys.size(); i += 2)
         {
             String name = toys.get(i);
-            String type = toys.get(i+1);
+            String type = toys.get(i + 1);
             toy t = getThatToy (name);
-            if(type.equalsIgnoreCase ("AFigure"))
+            if (t == null)
             {
-                getThatToy (name);
+                 if (type.equalsIgnoreCase("car"))
+                 {
+                     toyList.add(new ACar(name));
+                 }
+                 if (type.equalsIgnoreCase("af"))
+                 {
+                     toyList.add(new AFigure(name));
+                 }
             }
-            if type.equalsIgnoreCase ("Car")
+            else
             {
-
+                int temp = t.getCount() + 1;
+                t.setCount(temp);
             }
-            getThatToy (name);
-
         }
     }
     public toy getThatToy(String nm)
     {
-      for(toy x : list)
+        for(toy t : toyList)
         {
-            if(x.getName().equalsIgnoreCase(nm))
+            if(t.getName().equalsIgnoreCase(nm))
             {
-                return x;
-            }
-            else
-            {
-                return null;
+                return t;
             }
         }
+        return null;
     }
+    public String getMostFrqToy()
+    {
+        String name = "";
+        int max = Integer.MIN_VALUE;
+        for(toy t : toyList)
+        {
+            if (max < t.getCount())
+            {
+                max = t.getCount();
+                name = t.getName();
+            }
+        }
+        return name;
+    }
+    public String getMostFrqtype()
+    {
+        int car = 0;
+        int figure = 0;
 
+        for(toy t : toyList)
+        {
+            if(t.getType().equalsIgnoreCase("car"))
+            {
+                car++;
+            }
+            if(t.getType().equalsIgnoreCase("af"))
+            {
+                figure++;
+            }
+        }
+        if (car > figure)
+        {
+            return "car";
+        }
+        if (car < figure)
+        {
+            return "Action figure";
+        }
+        else
+        {
+            return "Equal amounts of action figures and cars";
+        }
+    }
+    public String toString()
+    {
+        return "" + toyList;
+    }
 }
