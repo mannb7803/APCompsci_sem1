@@ -5,7 +5,11 @@ public class Main
 {
     public static void main (String args[])
     {
-        Xbox x = new Xbox("XBox");
-        System.out.println(x);
+        Consol x = new Xbox("XBox");
+        System.out.println(x + "\n");
+        Consol x1 = new Playstation("apple");
+        System.out.println(x1 + "\n");
+        GameSystem x2 = new PC("Battlestation");
+        System.out.println(x2 + "\n");
     }
 }

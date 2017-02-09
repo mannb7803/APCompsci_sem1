@@ -12,5 +12,12 @@ public class PC extends GameSystem
     {
         super(p);
     }
-
+    public String systemInput()
+    {
+        return "Keyboard and mouse";
+    }
+    public String toString()
+    {
+        return "Platform:\t" + super.getplatform() + "\nSerial#:\t" + super.getserial() + "\nInput device:\t" + this.systemInput();
+    }
 }
