@@ -18,6 +18,6 @@ public class PC extends GameSystem
     }
     public String toString()
     {
-        return "Platform:\t" + super.getplatform() + "\nSerial#:\t" + super.getserial() + "\nInput device:\t" + this.systemInput();
+        return "Platform:\t" + super.getplatform() + "\nSerial#:\t" + super.getserial() + "\nInput device: " + this.systemInput();
     }
 }

@@ -12,12 +12,9 @@ public abstract class Consol extends GameSystem
     {
         super(p);
     }
-    public String getController()
-    {
-        return controller;
-    }
+    public abstract String getController();
     public  String toString()
     {
-        return "Platform:\t" + super.getplatform() + "\nSerial#:\t" + super.getserial() + "\nControler:\t" + this.getController();
+        return "Platform:\t" + super.getplatform() + "\nSerial#:\t" + super.getserial() + "\nControler: " + this.getController();
     }
 }
