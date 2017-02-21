@@ -6,7 +6,6 @@
     {
         public q2mumba()
         {
-            super();
             System.out.println("executing the Mambo constructor");
         }
     }
