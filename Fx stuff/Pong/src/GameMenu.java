@@ -147,7 +147,7 @@ public class GameMenu extends Application {
                 MenuButton btnSound = new MenuButton("Sound");
                 MenuButton btnVideo = new MenuButton("Video");
 
-                menu1.getChildren().addAll(btnStart, btnOptions, btnexit);
+                menu1.getChildr                         2                            en().addAll(btnStart, btnOptions, btnexit);
                 menu2.getChildren().addAll(btnSound, btnVideo, btnBack);
                 Rectangle bg = new Rectangle(800, 600);
                 bg.setFill(Color.GREY);
