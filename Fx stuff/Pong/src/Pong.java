@@ -1,10 +1,6 @@
 import javafx.application.Application;
 import javafx.event.EventHandler;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -26,8 +22,12 @@ public class Pong extends Application {
         Rectangle r = new Rectangle(80, 20, Color.BLACK);
         Circle  c1 = new Circle(40, 40, 10,  Color.BLUE);
         h.getChildren().addAll(r, c1);
+        c1.setCenterX(400);
+        c1.setCenterY(400);
+        Rectangle r1 = new Rectangle(80, 20, Color.BLACK); r1.setX(r.getX()+distance);
 
-        moveC(window, c1);
+
+        moveC(window, r, h);
 
 
        
@@ -36,7 +36,7 @@ public class Pong extends Application {
         primaryStage.show();
     }
 final int distance = 20;
-    private void moveC(Scene window, Circle c1) {
+    private void moveC(Scene window, Rectangle r, VBox h) {
         window.setOnKeyPressed(new EventHandler<KeyEvent>(){
             @Override
             public void handle(KeyEvent event) {
@@ -44,9 +44,10 @@ final int distance = 20;
                 {
                     case UP:    System.out.println("Test"); break;
 //                    case UP:    c1.setCenterY(c1.getCenterY() - distance); break;
-                    case RIGHT: c1.setCenterX(c1.getCenterX() + distance); break;
-                    case DOWN:  c1.setCenterY(c1.getCenterY() + distance); break;
-                    case LEFT:  c1.setCenterX(c1.getCenterX() - distance); break;
+                    case RIGHT: Rectangle r1 = new Rectangle(80, 20, Color.BLACK); r1.setY(r.getY()+distance); h.getChildren().remove(r);
+                        h.getChildren().add(r1); break;
+//                    case DOWN:  c1.setCenterY(c1.getCenterY() + distance); break;
+//                    case LEFT:  c1.setCenterX(c1.getCenterX() - distance); break;
                 }
             }
 
