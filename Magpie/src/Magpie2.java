@@ -13,7 +13,7 @@ public class Magpie2
 	 * 	@return a response based on the rules given */
 	public String getResponse(String statement)
 	{
-		String response = "";
+		String response = " ";
 
 		/** Exercise_01:
 		 * ==================================================
@@ -21,12 +21,16 @@ public class Magpie2
 		 * 	if you enter nothing, or if you accidentally hit
 		 * 	enter. Think to yourself: "What is the length of
 		 * 	an empty String?" */
+		if (statement.length() <= 0)
+		{
+			response = "Say something, please.";
+		}
 
 
 		/** To be completed in Exercise_02:
 		 * 	Modify the following code to use the findKeyword
 		 * 	Method (details in "Exercise_02" below. */
-		if (statement.indexOf("no") >= 0)
+		else if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
 		}

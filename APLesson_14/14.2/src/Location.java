@@ -4,5 +4,5 @@
 public interface Location {
     double [] getLoc();
     int getID();
-    void move();
+    void move(int x, int y);
 }
