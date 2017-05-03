@@ -51,8 +51,11 @@ public class Magpie2
 			{
 				response = transformYouMeStatement(statement);
 			}
+			else if (0 <= findKeyword(statement, "i") && findKeyword(statement, "i") < psn)
+			{
+				response = transformIYouStatement(statement);
+			}
 
-			else if()
 				else
 				{
 					response = getRandomResponse();
@@ -92,7 +95,7 @@ public class Magpie2
 	 */
 	private String transformYouMeStatement(String statement)
 	{
-		statement.trim().toLowerCase();
+		statement = statement.trim().toLowerCase();
 		String lastchar = statement.substring(statement.length()-1);
 		if(lastchar.equals("."))
 		{
@@ -103,7 +106,7 @@ public class Magpie2
 		String ros = statement.substring(psnoy+3, psnom);
 		return "What makes you think that I" + ros + "you?";
 	}
-	private String transformlike(String statement)
+	private String transformIYouStatement(String statement)
 	{
 		statement = statement.trim().toLowerCase();
 		String lastChar = statement.substring(statement.length()-1);
@@ -111,8 +114,9 @@ public class Magpie2
 		{
 			statement = statement.substring(0, statement.length()-1);
 		}
-		int psnl = findKeyword(statement, "like", 0);
-		String ros = statement.substring(psnl, psnl+4);
+		int psnoy = findKeyword(statement, "you", 0);
+		int psnoi = findKeyword(statement, "i", 0);
+		String ros = statement.substring(psnoi+1, psnoy).trim();
 		return "Why do you " + ros + " me";
 	}
 
@@ -134,7 +138,7 @@ public class Magpie2
 			{
 				after = phrase.substring(psn+goal.length(), psn+goal.length()+1);
 			}	
-			if(before.equalsIgnoreCase(" ") && after.equalsIgnoreCase(" "))
+			if(((before.compareTo("a") < 0) || (before.compareTo("z") >0)) && ((after.compareTo("a") < 0) || (after.compareTo("z") > 0)))
 			{
 				return psn;
 			}
