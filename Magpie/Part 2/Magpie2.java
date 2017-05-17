@@ -39,16 +39,12 @@ public class Magpie2
 			response = transformIWantToStatement(statement);
 		}
 
-
 		else
 		{
 			// Look for a two word (you <something> me)
 			// pattern
 			int psn = findKeyword(statement, "you", 0);
-
-
-			if (psn >= 0
-					&& findKeyword(statement, "me", psn) >= 0)
+			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0)
 			{
 				response = transformYouMeStatement(statement);
 			}
@@ -69,7 +65,7 @@ public class Magpie2
 	 */
 	private String transformIWantToStatement(String statement)
 	{
-		statement.trim();
+		statement = statement.trim();
 		String lastChar = statement.substring(statement.length()-1);
 		if(lastChar.equals("."))
 		{
@@ -91,7 +87,7 @@ public class Magpie2
 	 */
 	private String transformYouMeStatement(String statement)
 	{
-		statement.trim();
+		statement = statement.trim();
 		String lastchar = statement.substring(statement.length()-1);
 		if(lastchar.equals("."))
 		{
@@ -108,7 +104,7 @@ public class Magpie2
 		String phrase = statement.toLowerCase().trim();
 		String goallocal = goal.toLowerCase();
 		int psn =  0;
-		psn = statement.indexOf(goallocal, startPos);
+		psn = phrase.indexOf(goallocal, startPos);
 		//System.out.println(psn); test
 		while(psn >= 0)
 		{

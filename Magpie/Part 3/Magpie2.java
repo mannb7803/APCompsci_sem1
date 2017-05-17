@@ -46,20 +46,24 @@ public class Magpie2
 			int psn = findKeyword(statement, "you", 0);
 
 
-			if (psn >= 0
-					&& findKeyword(statement, "me", psn) >= 0)
+			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0)
 			{
 				response = transformYouMeStatement(statement);
 			}
-			else if (0 <= findKeyword(statement, "i") && findKeyword(statement, "i") < psn)
+			else
 			{
-				response = transformIYouStatement(statement);
-			}
-
+				psn = findKeyword(statement, "i", 0);
+				if (psn >= 0 && findKeyword(statement, "you", psn) >= 0)
+				{
+					response = transformIYouStatement(statement);
+				}
 				else
 				{
 					response = getRandomResponse();
 				}
+
+			}
+
 		}
 		return response;
 	}
@@ -125,7 +129,7 @@ public class Magpie2
 		String phrase = statement.toLowerCase().trim();
 		String goallocal = goal.toLowerCase();
 		int psn =  0;
-		psn = statement.indexOf(goallocal, startPos);
+		psn = phrase.indexOf(goallocal, startPos);
 		//System.out.println(psn); test
 		while(psn >= 0)
 		{
