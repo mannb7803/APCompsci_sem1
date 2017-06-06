@@ -112,6 +112,20 @@ public class PictureTester
 		 Picture gull = new Picture("seagull.jpg");
 		 gull.explore();
 	 }
+	 public static void  testCopy()
+	 {		  
+		Picture bonfire = new Picture("redMotorcycle.jpg");
+		Picture temple = new Picture("redMotorcycle.jpg");
+		temple.copy(bonfire, 250, 40, 100, 50, 200, 150);
+		temple.copy(bonfire, 200, 50, 80, 30, 200, 180);
+		temple.explore();
+	}
+	public static void testMyCollage()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -132,7 +146,7 @@ public class PictureTester
 //testMirrorHorizontalBotToTop();
 	//testMirrorVerticalltr(); //left to right
     //testMirrorTemple();
-    testMirrorArms();
+  //  testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
@@ -145,5 +159,7 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+	//testCopy();
+	testMyCollage();
   }
 }
